@@ -7,74 +7,48 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background-color: black;
-  color: white;
+}
+html {
+  background: url(https://images.unsplash.com/photo-1546525506-495a7647977b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  font-family: monospace;
+  text-align: center;
+  font-size: 0.8rem;
 }
 body {
-  font-family: Arial, sans-serif;
+  font-size: 2rem;
   display: flex;
-  justify-content: center;
+  flex: 1;
+  min-height: 100vh;
   align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-}
-
-.player-container {
-  text-align: center;
-  background-color: #333;
-  color: white;
-  border-radius: 10px;
-  padding: 20px;
-  width: 300px;
-}
-.controls {
-  display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
 }
-.song-info h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.song-info p {
-  font-size: 18px;
-  color: #ccc;
-  margin-bottom: 20px;
-}
-
-.controls button {
-  background-color: #ff5722;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.clock {
+  width: 30rem;
+  height: 30rem;
+  border: 20px solid white;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+    inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.controls button:hover {
-  background-color: #e64a19;
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
 }
-.controls {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.progress-container,
-.volume-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 15px;
-}
-
-#progress-bar,
-#volume-control {
-  width: 60%;
+.hand {
+  width: 50%;
+  height: 6px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
