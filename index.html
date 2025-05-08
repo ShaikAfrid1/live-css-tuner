@@ -4,22 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/3495/3495685.png" type="image/x-icon">
     <link
       rel="shortcut icon"
-      href="/assets/spiderman_img.png"
+      href="https://cdn-icons-png.flaticon.com/128/1199/1199124.png"
       type="image/x-icon"
     />
-    <title>JS Clock</title>
+    <title>Scoped CSS Variables and JS</title>
   </head>
   <body>
-    <div class="clock">
-      <div class="clock-face">
-        <div class="hand hour-hand"></div>
-        <div class="hand min-hand"></div>
-        <div class="hand second-hand"></div>
-      </div>
+    <h2>
+      Update CSS Variables with
+      <span class="hl" style="color: #ffc600">JS</span>
+    </h2>
+
+    <div class="controls">
+      <label for="spacing">Spacing:</label>
+      <input
+        id="spacing"
+        type="range"
+        name="spacing"
+        min="10"
+        max="200"
+        value="10"
+        data-sizing="px"
+      />
+
+      <label for="blur">Blur:</label>
+      <input
+        id="blur"
+        type="range"
+        name="blur"
+        min="0"
+        max="25"
+        value="10"
+        data-sizing="px"
+      />
+
+      <label for="base">Base Color</label>
+      <input id="base" type="color" name="base" value="#ffc600" />
     </div>
+
+    <img
+      src="https://images.unsplash.com/photo-1746457421535-60ef4cb6d8d4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    />
+
     <script src="app.js"></script>
   </body>
 </html>

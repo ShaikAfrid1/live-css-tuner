@@ -7,48 +7,38 @@ html,
 body {
   height: 100%;
   width: 100%;
+  
 }
-html {
-  background: url(https://images.unsplash.com/photo-1546525506-495a7647977b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-  background-size: cover;
-  font-family: monospace;
-  text-align: center;
-  font-size: 0.8rem;
+:root {
+  --base: #ffc600;
+  --spacing: 10px;
+  --blur: 10px;
+}
+img {
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+  object-fit: cover;
+  height: auto;
+  width: 80vw;
+  height: 78vh;
+}
+.hl {
+  color: var(--base);
 }
 body {
-  font-size: 2rem;
-  display: flex;
-  flex: 1;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-}
-.clock {
-  width: 30rem;
-  height: 30rem;
-  border: 20px solid white;
-  border-radius: 50%;
-  margin: 50px auto;
-  position: relative;
-  padding: 2rem;
-  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
-    inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background: #193549;
+  color: white;
+  font-family: "helvetica neue", sans-serif;
+  font-weight: 100;
+  font-size: 50px;
 }
 
-.clock-face {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform: translateY(-3px);
+.controls {
+  margin-bottom: 50px;
 }
-.hand {
-  width: 50%;
-  height: 6px;
-  background-color: black;
-  position: absolute;
-  top: 50%;
-  transform-origin: 100%;
-  transform: rotate(90deg);
-  transition: all 0.05s;
-  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+
+input {
+  width: 100px;
 }
